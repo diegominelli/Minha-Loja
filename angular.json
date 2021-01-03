@@ -104,6 +104,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MinhaLoja"
+    }
+  },
+  "defaultProject": "MinhaLoja",
+  "cli": {
+    "analytics": "302da39f-2a99-421f-8e36-219251e96e11"
+  }
 }
