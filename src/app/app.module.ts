@@ -13,6 +13,7 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
+import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ProdutoService } from './produtos/produtos.service';
     SobreComponent,
     ContatoComponent,
     DataBindingComponent,
+    ListaProdutoComponent,
   ],
   imports: [
     BrowserModule,
