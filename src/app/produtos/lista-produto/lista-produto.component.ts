@@ -23,4 +23,4 @@ export class ListaProdutoComponent implements OnInit {
         error => console.log(error)
       );
   }
-} 
+}
