@@ -20,6 +20,7 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { from } from 'rxjs';
+import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { from } from 'rxjs';
     ContatoComponent,
     DataBindingComponent,
     ListaProdutoComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
