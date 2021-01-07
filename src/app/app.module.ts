@@ -23,7 +23,6 @@ import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.co
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
-import { ProdutoDashboardComponent } from './demos/arquitetura-componentes/produto-dashboard/produto-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import { ProdutoDashboardComponent } from './demos/arquitetura-componentes/produ
     DataBindingComponent,
     ListaProdutoComponent,
     CadastroComponent,
-    ProdutoDashboardComponent,
   ],
   imports: [
     BrowserModule,

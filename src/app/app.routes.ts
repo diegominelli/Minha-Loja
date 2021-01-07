@@ -14,7 +14,9 @@ const rootRouterConfig: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'feature-data-binding', component: DataBindingComponent },
-  { path: 'produtos', component: ListaProdutoComponent },
+  { path: 'produtos',
+          loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
+          .then(m => m.ProdutoModule)},
   { path: 'produto-detalhe/:id', component: ListaProdutoComponent },
 
 ];
