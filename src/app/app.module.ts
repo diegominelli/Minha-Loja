@@ -17,12 +17,12 @@ registerLocaleData(localePt);
 import { AppComponent } from './app.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
-import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+import { AppRoutingModule } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     NgBrazil,
     TextMaskModule,
     CustomFormsModule,
-    [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
+    AppRoutingModule
   ],
   providers: [
     ProdutoService,   
