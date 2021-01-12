@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChildren } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, FormControlName } from '@angular/forms';
 
-import { Usuario } from './../../models/usuario';
+import { Usuario } from './models/usuario';
 import { NgBrazilValidators } from 'ng-brazil';
 import { utilsBr } from 'js-brasil';
 import { CustomValidators } from 'ng2-validation';
