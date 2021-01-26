@@ -21,7 +21,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
   exports: [
     MenuComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ]
 })
 export class NavegacaoModule {

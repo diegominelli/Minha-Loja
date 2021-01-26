@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from "./navegacao/home/home.component";
@@ -12,9 +13,10 @@ const rootRouterConfig: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'produtos',
-          loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
-          .then(m => m.ProdutoModule)}
-
+  loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
+  .then(m => m.ProdutoModule)},
+  
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
