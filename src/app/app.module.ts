@@ -17,7 +17,6 @@ registerLocaleData(localePt);
 import { AppComponent } from './app.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
-import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
@@ -29,7 +28,6 @@ import { AppRoutingModule } from './app.routes';
     AppComponent,
     SobreComponent,
     ContatoComponent,
-    DataBindingComponent,
     ListaProdutoComponent,
     CadastroComponent,
   ],
