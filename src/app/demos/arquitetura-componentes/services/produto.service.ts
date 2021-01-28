@@ -52,9 +52,14 @@ export class ProdutoService {
           }];        
     }
 
-    obterTodos(): Produto[] {
-        return this.produtos;
-      } 
+    obterTodos(estado: string): Produto[] {
+    
+      if (estado === 'ativos') {
+        return this.produtos.filter(produto => produto.ativo);
+      }
+  
+      return this.produtos;
+    }
     
     obterPorId(id: number): Produto {
         return this.produtos.find(produto => produto.id == id);
