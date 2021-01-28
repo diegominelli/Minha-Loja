@@ -12,7 +12,10 @@ export class EditarProdutoComponent implements OnInit {
 
   produto: Produto;
 
-  constructor(private route: ActivatedRoute, private produtoService: ProdutoService, private router: Router) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private produtoService: ProdutoService, 
+    private router: Router) { }
 
   ngOnInit(): void {
     this.route.params
