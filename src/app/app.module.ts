@@ -44,7 +44,6 @@ import { AppRoutingModule } from './app.routes';
   ],
   providers: [
     ProdutoService,   
-    {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
 })
