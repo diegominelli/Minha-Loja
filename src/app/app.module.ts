@@ -23,6 +23,10 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
+import { FilmesComponent } from './demos/pipe/filmes/filmes.component';
+import { FileSizePipe } from './demos/pipe/filmes/filesize.pipe';
+import { ImageFormaterPipe } from './demos/pipe/filmes/image.pipe';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +35,9 @@ import { CadastroGuard } from './services/cadastro.guard';
     ContatoComponent,
     ListaProdutoComponent,
     CadastroComponent,
+    FilmesComponent,
+    FileSizePipe,
+    ImageFormaterPipe
   ],
   imports: [
     BrowserModule,

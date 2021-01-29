@@ -7,12 +7,14 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { AuthGuard } from './services/app.guard';
 import { CadastroGuard } from './services/cadastro.guard';
+import { FilmesComponent } from './demos/pipe/filmes/filmes.component';
 
 const rootRouterConfig: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
-  { path: 'cadastro', component: CadastroComponent, canDeactivate: [CadastroGuard] },
   { path: 'sobre', component: SobreComponent },
+  { path: 'filmes', component: FilmesComponent },
+  { path: 'cadastro', component: CadastroComponent, canDeactivate: [CadastroGuard] },
   { path: 'contato', component: ContatoComponent },
   { path: 'produtos',
           loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
