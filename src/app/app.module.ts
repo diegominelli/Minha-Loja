@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -26,6 +26,12 @@ import { CadastroGuard } from './services/cadastro.guard';
 import { FilmesComponent } from './demos/pipe/filmes/filmes.component';
 import { FileSizePipe } from './demos/pipe/filmes/filesize.pipe';
 import { ImageFormaterPipe } from './demos/pipe/filmes/image.pipe';
+import { BarModule } from './demos/bar-di-zones/bar.module';
+import { BarServices } from './demos/bar-di-zones/bar.service';
+
+export const BAR_PROVIDERS: Provider[] = [
+  BarServices
+]
 
 
 @NgModule({
@@ -48,11 +54,13 @@ import { ImageFormaterPipe } from './demos/pipe/filmes/image.pipe';
     NgBrazil,
     TextMaskModule,
     CustomFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BarModule
   ],
   providers: [
     AuthGuard,
-    CadastroGuard
+    CadastroGuard,
+    // BAR_PROVIDERS
   ],
   bootstrap: [AppComponent]
 })

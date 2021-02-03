@@ -21,7 +21,7 @@ import { ProdutosResolve } from "./services/produto.resolve";
     ProdutoDashboardComponent,
     ProdutoDetalheComponent,
     ProdutoCountComponent,
-    EditarProdutoComponent
+    EditarProdutoComponent,
   ],
   imports: [
     CommonModule,
