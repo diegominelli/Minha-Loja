@@ -1,9 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-
-import { TasksService } from './../../todo.service';
-import { Store } from '../../todo.store';
 import { map } from 'rxjs/operators';
+
+import { TasksService } from '../../todo.service';
+import { Store } from '../../todo.store';
 
 @Component({
   selector: 'tasks',
@@ -11,21 +11,24 @@ import { map } from 'rxjs/operators';
 })
 export class TasksComponent implements OnInit, OnDestroy {
 
-  todolist$ : Observable<any[]>;
+  todolist$: Observable<any[]>;
   subscription: Subscription;
+  
+  constructor(private tasksService: TasksService, private store: Store) {}
 
-  constructor(private taskservice: TasksService, private store: Store) { }
-
-  ngOnInit(): void {
+  ngOnInit() {  
     this.todolist$ = this.store.getTodoList()
     .pipe(
-      map(todolist => todolist.filter(task => task.iniciado && !task.finalizado)));
+      map(todolist => todolist.filter(task => !task.iniciado && !task.finalizado)));
 
-      this.subscription = this.taskservice.getTodoList$.subscribe();
+      this.subscription = this.tasksService.getTodoList$.subscribe();
   }
 
-  ngOnDestroy(){
+  onToggle(event) {
+    this.tasksService.toggle(event);
+  }
+
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-
 }
